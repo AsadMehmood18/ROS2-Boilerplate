@@ -1,0 +1,13 @@
+# Request
+# TODO: Define the input fields for the request
+# Example:
+# int32 number
+# string name
+
+---
+
+# Response
+# TODO: Define the output fields for the response
+# Example:
+# string result
+# bool success
