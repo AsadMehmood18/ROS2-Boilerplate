@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS2 C++ Debugger",
+            "request": "launch",
+            "type": "cppdbg",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerServerAddress": "localhost:3000",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/install/<your_package_name>/lib/<your_package_name>/<your_executable>",
+        }
+    ]
+}
