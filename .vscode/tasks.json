@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ROS2: Build",
+            "type": "shell",
+            "command": "source /opt/ros/<ros_distro>/setup.bash && colcon build --symlink-install",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "ROS2: Debug Build",
+            "type": "shell",
+            "command": "echo -e '\nUse the following command to run under gdbserver:\n ros2 run --prefix \"gdbserver localhost:3000\" <package_name> <executable_name>\n\nUpdate .vscode/launch.json accordingly.\n' && source /opt/ros/<ros_distro>/setup.bash && colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "ROS2: Clean Build",
+            "type": "shell",
+            "command": "rm -rf build/ install/ log/ && source /opt/ros/<ros_distro>/setup.bash && colcon build --symlink-install",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
